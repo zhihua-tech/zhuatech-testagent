@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'TESTAGENT',systemName:'知华软件测试智能体',englishName:'AI TEST ORCHESTRATION',theme:{primary:'#604c8d',dark:'#29263d',accent:'#d08a45'},
  workspace:'研发效能中心 / 质量平台组',fieldWorkspace:'订单产品线 / 测试小队',period:'2026-08-17 · 发布 R26.8.3',liveText:'流水线于 14:18 更新',fieldContextLabel:'当前发布',fieldContext:'R26.8.3 · 冻结前 2 天',fieldUser:'周屿',fieldRole:'测试工程师',adminUser:'顾清',adminRole:'测试平台主管',
