@@ -57,3 +57,7 @@ npm run dev:demo
 SEO：AI 测试智能体、自动化测试平台、测试用例生成、回归测试、质量门禁、Java Vue 开源项目、知华科技。
 
 <!-- Copyright 2026 上海如静知华信息科技有限公司 -->
+
+## 企业级测试发布认证
+
+新增 `POST /api/enterprise/testagent/test-release-certification`，覆盖需求追溯、关键路径、安全、性能、回归、环境、缺陷、证据和回滚，返回 `CERTIFY / CONDITIONAL / BLOCKED`。详见 [发布认证说明](docs/ENTERPRISE_RELEASE_CERTIFICATION.md)。
