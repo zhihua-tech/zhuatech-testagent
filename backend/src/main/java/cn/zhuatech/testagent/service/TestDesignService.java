@@ -9,9 +9,16 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 基于变更风险生成可解释的回归测试组合，不调用外部模型。 */
+/**
+ * 基于变更风险生成可解释的回归测试组合，不调用外部模型。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class TestDesignService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result design(Request request) {
         int score = request.changeRisk() * 14 + Math.min(20, request.changedFiles() / 3);
         if (request.databaseChange()) score += 18;
@@ -31,11 +38,17 @@ public class TestDesignService {
             score >= 75 ? 2 : 4, suites, gates, priority.equals("P0") ? "RELEASE_BLOCKED" : "READY_FOR_REVIEW");
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String serviceCode, @Min(1) @Max(5) int changeRisk,
                           @Min(1) int changedFiles, @Min(1) int criticalFlows,
                           @Min(0) @Max(100) int currentCoveragePercent,
                           @Min(0) @Max(100) int flakyRatePercent,
                           boolean databaseChange, boolean productionIncident) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String serviceCode, int riskScore, String priority, int generatedCases,
                          int targetCoveragePercent, int recommendedParallelism,
                          List<String> testSuites, List<String> releaseGates, String releaseState) {}
