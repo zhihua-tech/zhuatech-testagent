@@ -1,5 +1,7 @@
 # 知华 TestAgent · AI 软件测试智能体
 
+[简体中文](README.md) | [English](README.en.md)
+
 > 从一次代码变更开始，自动组合冒烟、关键链路、数据库迁移和事故防回归计划；发布裁决仍由团队负责。
 
 [官网](https://www.zhuatech.cn/) · [架构](docs/architecture.md) · [接口](docs/api.md) · [部署](deploy/README.md) · [参与贡献](CONTRIBUTING.md)
