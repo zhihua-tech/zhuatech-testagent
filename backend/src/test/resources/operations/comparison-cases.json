@@ -1,0 +1,73 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "effectivePassPct": "#90",
+      "unexecuted": "#5"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "effectivePassPct": "#90",
+      "unexecuted": "#5"
+    }
+  },
+  {
+    "patch": {
+      "stablePass": "89"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "effectivePassPct": "#90",
+      "unexecuted": "#5"
+    }
+  },
+  {
+    "patch": {
+      "failed": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "effectivePassPct": "#90",
+      "unexecuted": "#5"
+    }
+  },
+  {
+    "patch": {
+      "criticalUncovered": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "effectivePassPct": "#90",
+      "unexecuted": "#5"
+    }
+  },
+  {
+    "patch": {
+      "stablePass": "100",
+      "quarantined": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "REVIEW",
+      "effectivePassPct": "#90",
+      "unexecuted": "#5"
+    }
+  }
+]
