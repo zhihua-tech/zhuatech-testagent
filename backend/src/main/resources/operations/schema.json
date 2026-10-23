@@ -1,0 +1,93 @@
+{
+  "slug": "testagent",
+  "title": "隔离不稳定测试后的有效覆盖",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "total",
+      "label": "计划用例数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "stablePass",
+      "label": "稳定通过数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "failed",
+      "label": "失败数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "quarantined",
+      "label": "隔离不稳定数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "criticalUncovered",
+      "label": "关键需求未覆盖数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "requiredPassPct",
+      "label": "最低有效通过%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "effectivePassPct",
+      "label": "有效通过%"
+    },
+    {
+      "key": "unexecuted",
+      "label": "未执行数"
+    },
+    {
+      "key": "quarantinePct",
+      "label": "隔离比例%"
+    }
+  ],
+  "description": "将稳定通过、失败和隔离不稳定测试按互斥口径核对，计算有效通过率，关键需求不能只靠隔离用例覆盖。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "total": "100",
+        "stablePass": "90",
+        "failed": "0",
+        "quarantined": "5",
+        "criticalUncovered": "0",
+        "requiredPassPct": "90"
+      }
+    ]
+  }
+}

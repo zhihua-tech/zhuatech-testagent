@@ -1,0 +1,63 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "effectivePassPct": "#90",
+      "unexecuted": "#5"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "stablePass": "89"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "failed": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "criticalUncovered": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "stablePass": "100",
+      "quarantined": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "stablePass": "96",
+      "quarantined": "5"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "total": "0"
+    },
+    "expected": {},
+    "error": true
+  }
+]
